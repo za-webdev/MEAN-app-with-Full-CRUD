@@ -1,0 +1,25 @@
+
+{{task| json}}
+
+
+<form (submit)="create()">
+	Title:<input type="text" [(ngModel)]="task.title" name="title"><br>
+	Description:<input type="text"  [(ngModel)]="task.description" name="description"><br>
+	completed:<input type="checkbox" [(ngModel)]="task.completed" name="completed"><br>
+	<input type="submit" value="Create task">
+
+</form>
+
+
+<button (click)="onButtonClick($event)">Click me!</button>
+
+
+<div *ngFor="let task of tasks">
+<p>Title: {{task.title}}</p>
+<p>Description: {{task.description}}</p>
+<p>Completed: {{task.completed}}</p>
+</div>
+
+
+
+<!-- <P>{{task.title}}</P> -->
